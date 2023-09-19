@@ -1,0 +1,33 @@
+#list1 .form-control {
+    border-color: transparent;
+  }
+  #list1 .form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  #list1 .select-input.form-control[readonly]:not([disabled]) {
+    background-color: #3dede7;
+  }
+
+  .todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.delete {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.left-content {
+    display: flex;
+    align-items: center;
+}
+.form-check{
+    font-size: 15px;
+}

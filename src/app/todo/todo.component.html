@@ -1,0 +1,58 @@
+<body style="background-color: rgb(156, 216, 248);">
+
+
+<section class="vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card" id="list1" style="border-radius: .75rem; background-color: #eff1f2;">
+            <div class="card-body py-4 px-4 px-md-5">
+  
+              <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
+                <i class="fas fa-check-square me-1"></i>
+                <u>MY TO DO LIST</u>
+              </p>
+  
+              <div class="pb-2">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex flex-row align-items-center">
+                      <input [(ngModel)]="todoText" (keyup.enter)="addTodo()"  class="form-control form-control-lg" id="exampleFormControlInput1"
+                        placeholder="Add new task to do..">
+                      <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i
+                          class="fas fa-calendar-alt fa-lg me-3"></i></a>
+                      <div>
+                        <button type="button" class="btn btn-primary" (click)="addTodo()">Add</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+           
+                <div class="error" *ngIf="error" class="form-check" style="font-size: 15px;">{{ error }}</div>
+                <ul>
+                    
+                    <li *ngFor="let todo of todos; let i = index" class="todo-item">
+                        <div class="left-content">
+                        <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked2"
+                      aria-label="..." />
+                      &nbsp; {{ todo }}
+                    </div>
+                        <button style="background-color: red; border-color: red;" class="delete" (click)="deleteTodo(i)">Delete</button>
+                    </li>
+                </ul>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+</body>
